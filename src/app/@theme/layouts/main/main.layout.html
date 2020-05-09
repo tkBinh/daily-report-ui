@@ -1,15 +1,15 @@
-<!--&lt;!&ndash; Loading &ndash;&gt;-->
-<!--<app-loading></app-loading>-->
-<!--&lt;!&ndash; END Loading &ndash;&gt;-->
-<!--<app-header *ngIf="!isBlankPage">-->
-<!--</app-header>-->
-<!--<div class="content" *ngIf="!isBlankPage">-->
-<!--  <app-side-bar></app-side-bar>-->
-<!--  <app-bread-crumbs></app-bread-crumbs>-->
-<!--  <main class="main">-->
-<!--    <ng-content select="router-outlet"></ng-content>-->
-<!--  </main>-->
-<!--</div>-->
-<!--<app-footer *ngIf="!isBlankPage">-->
-<!--</app-footer>-->
-<!--<router-outlet name="login"></router-outlet>-->
+<!-- Loading -->
+<app-loading></app-loading>
+<!-- END Loading -->
+
+<app-header></app-header>
+
+<div class="content">
+  <main>
+    <ng-content select="router-outlet"></ng-content>
+  </main>
+</div>
+
+<app-footer></app-footer>
+
+<router-outlet name="login"></router-outlet>

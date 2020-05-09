@@ -1,1 +1,6 @@
-<p>loading works!</p>
+<div class="loading" *ngIf="show">
+  <div class="spinner" role="status">
+    <img src="assets/img/loading-spinner.svg" alt="Loading spinner">
+  </div>
+  <span>{{ data.text }}</span>
+</div>
