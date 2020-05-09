@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "daily-report-ui"
+    }
+  },
+  "defaultProject": "daily-report-ui",
+  "cli": {
+    "analytics": false
+  }
 }
