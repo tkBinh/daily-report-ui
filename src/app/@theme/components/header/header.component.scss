@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+@import "../../styles/utility";
+
+header {
+  height: $height-header;
+  background-color: $color-header-background;
+  @extend .flex-center-vertical;
+  padding-left: 70px;
+
+  .sample-header-icon {
+    color: white;
+    margin-right: 30px;
+    height: 50px;
+    @extend .flex-center-vertical;
+
+    i {
+      font-size: 25px;
+    }
+
+    span {
+      margin:0 10px;
+      font-size: 25px;
+    }
+  }
+}
