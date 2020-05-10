@@ -3,7 +3,7 @@ version: 2.1
 # add your orb below, to be used in integration tests (note: a @dev:alpha
 # release must exist.);
 orbs:
-  aws-s3: circleci/aws-s3@dev:alpha
+  aws-s3: circleci/aws-s3@1.0.15
   orb-tools: circleci/orb-tools@9.0
 
 # Pipeline parameters
