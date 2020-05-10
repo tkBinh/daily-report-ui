@@ -1,26 +1,19 @@
-#version: 2.1
-#orbs:
-#  node: circleci/node@1.1.6
-#jobs:
-#  build-and-test:
-#    executor:
-#      name: node/default
-#    steps:
-#      - checkout
-#      - node/with-cache:
-#          steps:
-#            - run: npm install
-#workflows:
-#    build-and-test:
-#      jobs:
-#        - build-and-test
-
 version: 2.1
-  orbs:
-    aws-s3: circleci/aws-s3@1.0.15    #AWS S3 orb
-
-  workflows: # Define a Workflow running the build job, then the deploy job
-    version: 2
+orbs:
+  aws-s3: circleci/aws-s3@1.0.15
+jobs:
+  build-and-test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm install
+workflows:
+    build-and-test:
+      jobs:
+        - build-and-test
     build-deploy: # Make a workflow to build and deploy your project
       jobs:
         - build
@@ -30,8 +23,6 @@ version: 2.1
             filters:
               branches:
                 only: master # Only deploy when the commit is on the Master branch
-
-  jobs: # Define the build and deploy jobs
     steps:
       - checkout
       - aws-s3/sync:
@@ -41,4 +32,5 @@ version: 2.1
             --acl public-read \
             --cache-control "max-age=86400"
           overwrite: true # default is false
+
 
