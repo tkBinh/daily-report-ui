@@ -1,6 +1,5 @@
 import {Component, Injector, OnInit} from '@angular/core';
 import {AbstractBaseComponent} from '../../@core/base/base.component';
-import {TopService} from '../../@core/services/top.service';
 
 @Component({
   selector: 'app-top',
@@ -9,15 +8,11 @@ import {TopService} from '../../@core/services/top.service';
 })
 export class TopComponent extends AbstractBaseComponent implements OnInit {
 
-  constructor(injector: Injector, topService: TopService)
-  {
+  constructor(readonly injector: Injector) {
     super(injector, {
-      title: 'Trang chu',
+      title: 'Home'
     });
-    this.init();
   }
-
-  init() {}
 
   ngOnInit(): void {
   }

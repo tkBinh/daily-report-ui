@@ -1,0 +1,43 @@
+@import "../../../@theme/styles/variables";
+@import "../../../@theme/styles/utility";
+
+.project-list {
+  .project-item {
+    &:hover {
+      @extend .pointer;
+
+      .card {
+        &-body {
+          background: linear-gradient(to right, #11998e, #38ef7d);
+          color: white;
+          padding: 20px 0 20px 30px;
+          transition: all .5s;
+        }
+      }
+    }
+  }
+
+  .card {
+    &-header {
+      height: 120px;
+      background: url("src/assets/img/default-project-bg.jpg") no-repeat;
+      background-size: cover;
+    }
+
+    &-body {
+      .project-name {
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+
+    &-footer {
+      background: #333333;
+      color: #FFFFFF;
+
+      .project-status {
+        margin-left: 10px;
+      }
+    }
+  }
+}
