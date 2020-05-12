@@ -1,0 +1,23 @@
+@import "../../../@theme/styles/variables";
+@import "../../../@theme/styles/utility";
+
+.task-list {
+  .task-box {
+    padding: 2rem 1rem;
+    font-weight: bold;
+    background-color: #eee;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    @extend .pointer;
+
+    &:hover {
+      background: $color-gradient !important;
+      padding-left: 2rem;
+      color: #FFFFFF;
+
+      button {
+        display: flex !important;
+      }
+    }
+  }
+}

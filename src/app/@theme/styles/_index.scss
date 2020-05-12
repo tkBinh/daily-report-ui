@@ -16,3 +16,15 @@ body {
     margin-top: 35px;
   }
 }
+
+i {
+  margin-right: .7rem;
+}
+
+/* Common hover padding animation horizontal */
+.hover-horizontal {
+  &:hover {
+    padding: .5rem 2.5rem;
+    transition: all .7s;
+  }
+}

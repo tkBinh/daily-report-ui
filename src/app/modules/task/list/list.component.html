@@ -1,1 +1,20 @@
-<p>list works!</p>
+<section class="task-list" data-aos="fade-down"
+         data-aos-duration="1000">
+  <div class="jumbotron">
+    <h2>Project 1</h2>
+  </div>
+
+  <div class="flex-center mb-3">
+    <button class="btn btn-primary btn-lg hover-horizontal"><i class="fas fa-plus"></i>Create more</button>
+  </div>
+
+  <div *ngFor="let item of tasks">
+    <div class="task-box rounded flex-center-vertical">
+      <span>{{ item.name }}</span>
+      <button class="btn btn-danger btn-sm ml-auto flex-center d-none">
+        <i class="fas fa-trash-alt"></i>
+        <span>Remove</span>
+      </button>
+    </div>
+  </div>
+</section>
